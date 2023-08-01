@@ -7,23 +7,32 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [toDoItems, setToDoItems] = useState([]);
   const [isMouseOver, setMouseOver] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   function handleChange(event) {
     const newValue = event.target.value;
 
     setNewItem(newValue);
+    setIsButtonDisabled(false);
   }
 
   function addItem(itemToAdd) {
-    itemToAdd !== "" && setToDoItems((prevItems) => [...prevItems, itemToAdd]);
+    // Incorporate the form validation here or inside the handleKeyPress() function.
+    if (itemToAdd.trim() === "") {
+      setErrorMessage("Error: Invalid task added.");
+      setIsButtonDisabled(true);
+    } else {
+      setToDoItems((prevItems) => [...prevItems, itemToAdd]);
+      setErrorMessage("");
+    }
 
     setNewItem("");
   }
 
   function deleteItem(id) {
-    setToDoItems((prevItems) =>
-      prevItems.filter((_, index) =>  index !== id),
-    );
+    setToDoItems((prevItems) => prevItems.filter((_, index) => index !== id));
+    setErrorMessage("");
   }
 
   function handleMouseOver() {
@@ -33,6 +42,7 @@ function App() {
   function handleKeyPress(event) {
     const pressedKey = event.key;
 
+    // Calls on the addItem function and passing newItem argument to itemToAdd
     pressedKey === "Enter" && addItem(newItem);
   }
 
@@ -48,8 +58,12 @@ function App() {
         mouseOver={handleMouseOver}
         isMouseOver={isMouseOver}
         handleKeyPress={handleKeyPress}
+        disabled={isButtonDisabled}
       />
       <div>
+        <div className="error-message">
+          <span>{errorMessage}</span>
+        </div>
         <ul>
           {toDoItems.map((item, index) => (
             <ToDoItems

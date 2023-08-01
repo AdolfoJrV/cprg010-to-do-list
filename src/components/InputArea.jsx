@@ -10,6 +10,7 @@ function InputArea(props) {
         type="text"
       />
       <button
+        disabled={props.disabled}
         onClick={() => {
           props.addItem(props.value);
         }}
