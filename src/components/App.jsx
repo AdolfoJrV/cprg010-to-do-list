@@ -22,7 +22,7 @@ function App() {
 
   function deleteItem(id) {
     setToDoItems((prevItems) =>
-      prevItems.filter((item, index) => index !== id),
+      prevItems.filter((_, index) =>  index !== id),
     );
   }
 
