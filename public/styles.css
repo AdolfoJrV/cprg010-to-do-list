@@ -98,6 +98,8 @@ p {
 }
 
 .error-message {
+  font-size: smaller;
+  font-weight: bolder;
   color: red;
 }
 

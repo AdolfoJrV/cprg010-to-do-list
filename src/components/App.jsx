@@ -20,7 +20,7 @@ function App() {
   function addItem(itemToAdd) {
     // Incorporate the form validation here or inside the handleKeyPress() function.
     if (itemToAdd.trim() === "") {
-      setErrorMessage("Error: Invalid task added.");
+      setErrorMessage("Error: Empty string is not valid.");
       setIsButtonDisabled(true);
     } else {
       setToDoItems((prevItems) => [...prevItems, itemToAdd]);
