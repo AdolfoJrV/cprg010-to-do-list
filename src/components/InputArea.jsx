@@ -16,16 +16,11 @@ function InputArea(props) {
         }}
         type="submit"
       >
-        <span
-          style={{ background: props.isMouseOver && "pink" }}
-          onMouseOver={props.mouseOver}
-          onMouseOut={props.mouseOver}
-        >
-          Add
-        </span>
+        Add
       </button>
     </div>
   );
 }
 
 export default InputArea;
+

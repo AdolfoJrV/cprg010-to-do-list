@@ -56,25 +56,20 @@ body {
 }
 
 button {
-  padding: 0;
-  border: none;
   font-family: "Architects Daughter", cursive;
-  text-decoration: none;
-  padding-bottom: 3px;
+  padding: 0.25rem 0.5rem;
   border-radius: 5px;
-  background-color: #ffeaa7;
+  font-size: 1.1rem;
 }
 
-button.disabled {
-  cursor: not-allowed;
-}
-
-button span {
+button:disabled {
+  /* cursor: not-allowed; */
   background: #f1f5f8;
-  display: block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: 2px solid hsl(198, 1%, 29%);
+  border: 2px solid hsl(0, 0%, 70%);
+}
+
+button:enabled {
+  background-color: #ffeaa7;
 }
 
 .container {
@@ -87,7 +82,7 @@ button span {
 ul {
   display: block;
   text-align: left;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 
 p {
@@ -97,9 +92,8 @@ p {
   font-size: smaller;
 }
 
-.error-message {
+.alert-message {
   font-size: smaller;
   font-weight: bolder;
   color: red;
 }
-

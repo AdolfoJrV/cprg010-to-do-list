@@ -7,7 +7,7 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [toDoItems, setToDoItems] = useState([]);
   const [isMouseOver, setMouseOver] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   function handleChange(event) {
@@ -20,11 +20,11 @@ function App() {
   function addItem(itemToAdd) {
     // Incorporate the form validation here or inside the handleKeyPress() function.
     if (itemToAdd.trim() === "") {
-      setErrorMessage("Error: Empty string is not valid.");
+      setAlertMessage("Error: Empty string is not valid.");
       setIsButtonDisabled(true);
     } else {
       setToDoItems((prevItems) => [...prevItems, itemToAdd]);
-      setErrorMessage("");
+      setAlertMessage("");
     }
 
     setNewItem("");
@@ -32,11 +32,13 @@ function App() {
 
   function deleteItem(id) {
     setToDoItems((prevItems) => prevItems.filter((_, index) => index !== id));
-    setErrorMessage("");
+    setAlertMessage("");
   }
 
   function handleMouseOver() {
-    setMouseOver(!isMouseOver);
+    if (!isButtonDisabled) {
+      setMouseOver(!isMouseOver);
+    }
   }
 
   function handleKeyPress(event) {
@@ -61,8 +63,8 @@ function App() {
         disabled={isButtonDisabled}
       />
       <div>
-        <div className="error-message">
-          <span>{errorMessage}</span>
+        <div className="alert-message">
+          <span>{alertMessage}</span>
         </div>
         <ul>
           {toDoItems.map((item, index) => (
