@@ -20,7 +20,7 @@ function App() {
       <div className="heading">
         <h1>My To-Do-List</h1>
       </div>
-      <InputArea addItemToList={addItemToList} />
+      <InputArea addItemToList={addItemToList} items={toDoItems}/>
       <ToDoList items={toDoItems} deleteItem={deleteItem} />
       <Footer />
     </div>

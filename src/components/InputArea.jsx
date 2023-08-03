@@ -10,7 +10,7 @@ function InputArea(props) {
     async function fetchData() {
       let response;
       try {
-        response = await fetch("/data/tasks.json"); 
+        response = await fetch("/data/tasks.json");
         const data = await response.json();
         setRandomTasks(data);
       } catch (error) {
@@ -27,6 +27,7 @@ function InputArea(props) {
     setNewItem(randomTask);
     inputRef.current.value = randomTask;
     inputRef.current.focus();
+    setIsButtonDisabled(false);
   }
 
   const inputRef = React.createRef();
@@ -40,6 +41,9 @@ function InputArea(props) {
   function addItem(itemToAdd) {
     if (itemToAdd.trim() === "") {
       setAlertMessage("Error: Empty string is not valid.");
+      setIsButtonDisabled(true);
+    } else if (props.items.includes(itemToAdd)) {
+      setAlertMessage(`"${itemToAdd}" is already in the task list.`);
       setIsButtonDisabled(true);
     } else {
       props.addItemToList(itemToAdd);
@@ -74,7 +78,9 @@ function InputArea(props) {
         >
           Add
         </button>
-        <button type="button" onClick={createRandomTask}>Random Task</button>
+        <button type="button" onClick={createRandomTask}>
+          Random Task
+        </button>
       </div>
       <div className="alert-message">
         <span>{alertMessage}</span>
