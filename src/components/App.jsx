@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ToDoList from "./ToDoList.jsx";
 import InputArea from "./InputArea.jsx";
+// import InputArea from "./InputAreaClass.jsx";
 import Footer from "./Footer";
 
 function App() {
