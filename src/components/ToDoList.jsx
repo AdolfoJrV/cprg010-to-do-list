@@ -2,7 +2,6 @@ import React from "react";
 import ToDoItems from "./ToDoItems.jsx";
 
 function ToDoList(props) {
-
   return (
     <ul>
       {props.items.map((item, index) => (
@@ -13,3 +12,4 @@ function ToDoList(props) {
 }
 
 export default ToDoList;
+
