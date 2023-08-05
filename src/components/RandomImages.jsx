@@ -22,7 +22,7 @@ const RandomImages = () => {
 
   return (
     <div className="img-container">
-      <img className="images" src={imageUrl} alt="Lorem Picsum" />;
+      <img className="images" src={imageUrl} alt="Lorem Picsum" />
     </div>
   );
 };
