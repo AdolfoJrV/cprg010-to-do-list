@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import ThemeContext from "./ThemeContext";
 
 const RandomImages = () => {
   const [imageUrl, setImageUrl] = useState("");
+
+  const { isDarkMode } = React.useContext(ThemeContext);
 
   useEffect(() => {
     fetchImage();
@@ -21,7 +24,7 @@ const RandomImages = () => {
   };
 
   return (
-    <div className="img-container">
+    <div className={isDarkMode ? "img-container-dm" : "img-container-lt"}>
       <img className="images" src={imageUrl} alt="Lorem Picsum" />
     </div>
   );

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import ThemeContext from "../components/ThemeContext.jsx";
+import { Button } from "reactstrap";
 
 function InputArea(props) {
   const [newItem, setNewItem] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
   const [randomTasks, setRandomTasks] = useState(null);
+  const { isDarkMode } = React.useContext(ThemeContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -61,8 +64,9 @@ function InputArea(props) {
 
   return (
     <>
-      <div className="form">
+      <div>
         <input
+          className={isDarkMode ? "input-dm" : "input-lt"}
           ref={inputRef}
           value={newItem}
           onChange={handleChange}
@@ -70,6 +74,7 @@ function InputArea(props) {
           type="text"
         />
         <button
+          className="add-button"
           disabled={isButtonDisabled}
           onClick={() => {
             addItem(newItem);
@@ -78,9 +83,9 @@ function InputArea(props) {
         >
           Add
         </button>
-        <button type="button" onClick={createRandomTask}>
+        <Button className="rnd-button" outline={isDarkMode ? false : true} type="button" onClick={createRandomTask}>
           Random Task
-        </button>
+        </Button>
       </div>
       <div className="alert-message">
         <span>{alertMessage}</span>

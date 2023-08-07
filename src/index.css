@@ -1,4 +1,4 @@
-body {
+.body-lt {
   background-color: #ffeaa7;
   padding: 1rem;
   box-sizing: border-box;
@@ -36,15 +36,16 @@ body {
   margin-bottom: 1rem;
 }
 
-.heading h1 {
+.h1-lt {
   transform: rotate(2deg);
   padding: 0.2rem 1.2rem;
   border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
   background-color: #fdcb6e;
   font-size: 1.5rem;
+  color: black;
 }
 
-.form input {
+.input-lt {
   box-sizing: border-box;
   background-color: transparent;
   padding: 0.7rem;
@@ -59,19 +60,19 @@ body {
   margin-bottom: 40px;
 }
 
-button {
+.add-button {
   font-family: "Architects Daughter", cursive;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
   font-size: 1.1rem;
 }
 
-button:disabled {
+.add-button:disabled {
   background: #f1f5f8;
   border: 2px solid hsl(0, 0%, 70%);
 }
 
-button:enabled {
+.add-button:enabled {
   background-color: #ffeaa7;
 }
 
@@ -80,12 +81,29 @@ ul {
   text-align: left;
 }
 
+.nav-lt {
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #ffeaa7;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.link-lt {
+  color: #3b3739;
+}
+
+.link-lt:hover {
+  color: blue;
+}
+
 .footer p {
   font-size: smaller;
 }
 
-.img-container {
+.img-container-lt {
   min-width: 250px;
+  box-shadow: 4px 3px 7px 2px #00000040;
 }
 
 .images {
@@ -96,4 +114,88 @@ ul {
   font-size: smaller;
   font-weight: bolder;
   color: red;
+}
+
+.rnd-button:hover,
+.modeButton:hover {
+  background-color: #ffeaa7;
+  color: black;
+}
+
+/* dark mode css styling */
+
+.body-dm {
+  background-color: #60656f;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  font-size: 130%;
+}
+
+.container-dm {
+  width: 100%;
+  min-height: 650px;
+  max-width: 500px;
+  min-width: 250px;
+  background: #3b3739;
+  background-image: radial-gradient(#68696a 7.2%, transparent 0);
+  background-size: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.input-dm {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0.7rem;
+  border-bottom-right-radius: 15px 3px;
+  border-bottom-left-radius: 3px 15px;
+  border: solid 3px transparent;
+  border-bottom: dashed 3px #f7f7ff;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: #f7f7ff;
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.h1-dm {
+  transform: rotate(2deg);
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #60656f;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-dm {
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #60656f;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.link-dm {
+  color: #f7f7ff;
+}
+
+.link-dm:hover {
+  color: cyan;
+}
+
+.img-container-dm {
+  min-width: 250px;
+  box-shadow: 4px 3px 7px 2px #181818;
 }
