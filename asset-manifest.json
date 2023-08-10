@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AdolfoJrV/cprg010-to-do-list/static/css/main.32d886ea.css",
-    "main.js": "/AdolfoJrV/cprg010-to-do-list/static/js/main.3f33a798.js",
-    "static/js/787.b6086cd3.chunk.js": "/AdolfoJrV/cprg010-to-do-list/static/js/787.b6086cd3.chunk.js",
-    "index.html": "/AdolfoJrV/cprg010-to-do-list/index.html",
-    "main.32d886ea.css.map": "/AdolfoJrV/cprg010-to-do-list/static/css/main.32d886ea.css.map",
-    "main.3f33a798.js.map": "/AdolfoJrV/cprg010-to-do-list/static/js/main.3f33a798.js.map",
-    "787.b6086cd3.chunk.js.map": "/AdolfoJrV/cprg010-to-do-list/static/js/787.b6086cd3.chunk.js.map"
+    "main.css": "/cprg010-to-do-list/static/css/main.32d886ea.css",
+    "main.js": "/cprg010-to-do-list/static/js/main.8436b955.js",
+    "static/js/787.b6086cd3.chunk.js": "/cprg010-to-do-list/static/js/787.b6086cd3.chunk.js",
+    "index.html": "/cprg010-to-do-list/index.html",
+    "main.32d886ea.css.map": "/cprg010-to-do-list/static/css/main.32d886ea.css.map",
+    "main.8436b955.js.map": "/cprg010-to-do-list/static/js/main.8436b955.js.map",
+    "787.b6086cd3.chunk.js.map": "/cprg010-to-do-list/static/js/787.b6086cd3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32d886ea.css",
-    "static/js/main.3f33a798.js"
+    "static/js/main.8436b955.js"
   ]
 }
