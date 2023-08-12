@@ -83,10 +83,10 @@ function InputArea(props) {
         >
           Add
         </button>
+      </div>
         <Button className="rnd-button" outline={isDarkMode ? false : true} type="button" onClick={createRandomTask}>
           Random Task
         </Button>
-      </div>
       <div className="alert-message">
         <span>{alertMessage}</span>
       </div>

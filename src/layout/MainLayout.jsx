@@ -10,9 +10,9 @@ const MainLayout = (props) => {
   const { isDarkMode } = React.useContext(ThemeContext);
 
   return (
-    <Container
+    <Container fluid  
       className={
-        isDarkMode ? "container-dm mt-2 ml-1 mr-1" : "container mt-2 mr-1"
+        isDarkMode ? "container-dm mt-2 ml-1 mr-1" : "container-lt mt-2"
       }
     >
       <Header className="heading mt-4">
