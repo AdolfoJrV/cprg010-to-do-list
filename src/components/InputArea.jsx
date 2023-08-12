@@ -13,7 +13,7 @@ function InputArea(props) {
     async function fetchData() {
       let response;
       try {
-        response = await fetch("/data/tasks.json");
+        response = await fetch(`${process.env.PUBLIC_URL}/data/tasks.json`);
         const data = await response.json();
         setRandomTasks(data);
       } catch (error) {
