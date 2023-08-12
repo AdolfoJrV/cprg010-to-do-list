@@ -12,7 +12,7 @@ const MainLayout = (props) => {
   return (
     <Container fluid  
       className={
-        isDarkMode ? "container-dm mt-2 ml-1 mr-1" : "container-lt mt-2"
+        isDarkMode ? "container-dm mt-2 mb-3" : "container-lt mt-2 mb-3"
       }
     >
       <Header className="heading mt-4">
