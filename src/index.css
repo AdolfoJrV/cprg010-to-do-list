@@ -13,6 +13,7 @@
 
 .container-lt {
   min-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   background: #f1f5f8;
@@ -150,6 +151,7 @@ ul {
 
 .container-dm {
   min-width: 300px;
+  max-width: 500px;
   background: #3b3739;
   background-image: radial-gradient(#68696a 7.2%, transparent 0);
   background-size: 25px 25px;
